@@ -1,7 +1,9 @@
-// Sliding window approach
+/* Find the Longest Subarray with Sum = K.
+Array has ONLY positive numbers. */
 #include <iostream>
 
 int main() {
+    // Sliding window approach
     int SIZE = 8; 
     int arr[SIZE] = {1, 2, 3, 2, 1, 2, 1, 2};
     int K = 5;
