@@ -1,0 +1,28 @@
+#include <iostream>
+
+int main()
+{
+    char str[] = "aaaabbccdc";
+
+    int count[125] = {0};
+
+    // Count each character
+    for (int i = 0; str[i] != '\0'; i++)
+    {
+        count[(unsigned char)str[i]]++;
+    }
+
+    // Print each character only once, in order
+    for (int i = 0; str[i] != '\0'; i++)
+    {
+        if (count[(unsigned char)str[i]] > 0)
+        {
+            std::cout << str[i]
+                      << count[(unsigned char)str[i]];
+
+            count[(unsigned char)str[i]] = 0;
+        }
+    }
+
+    return 0;
+}
